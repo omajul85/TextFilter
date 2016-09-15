@@ -26,3 +26,19 @@ describe "The function text_filter" do
 	end
 
 end
+
+describe "The function hasSpecialCharacter?" do
+	it "returns true if input word ends with special character" do
+		words = %w(yellow! red? foo-)
+		words.each do |word|
+			expect(hasSpecialCharacter?(word)).to eq true
+		end
+	end
+
+	it "returns false if input word does not end with special character" do
+		words = %w(yellow red foo bar)
+		words.each do |word|
+			expect(hasSpecialCharacter?(word)).to eq false
+		end
+	end
+end
