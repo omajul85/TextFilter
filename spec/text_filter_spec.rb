@@ -1,19 +1,19 @@
 require "text_filter"
 
-describe "text filter" do
+describe "The function text_filter" do
 	
-	str1 = "The house is green and red"
-	str2 = "The colombian flag contains YeLLOw, rEd and bLUe"
+	str = "The house is GrEeN and RED"
 
-	it "returns 'r-d' when input string is 'red'" do
-		expect(text_filter('red')).to eq "r-d"
+	it "returns an empty string if input is empty string" do
+		expect(text_filter("")).to eq ""
 	end
 
-	it "returns 'gr--n when input string is 'green'" do
-		expect(text_filter('green')).to eq "gr--n"
+	it "replaces vowels of banned words with case insensitive checking" do
+		expect(text_filter(str)).to eq "The house is Gr--N and R-D"
 	end
 
-	it "replaces vowels of banned words" do
-		expect(text_filter(str1)).to eq "The house is gr--n and r-d"
+	it "accepts a string and an array of banned words" do
+		expect(text_filter(str, ["house"])).to eq "The h--s- is GrEeN and RED"		
 	end
+
 end
