@@ -21,8 +21,8 @@ $ git clone https://github.com/omajul85/TextFilter.git
 $ cd TextFilter/
 $ irb
 $ require './lib/text_filter'
-$ text_filter("The house is red and green")
-$ => "The house is r-d and gr--n"
+$ text_filter("The house is RED and GrEEn")
+$ => "The house is R-D and Gr--n"
 ```
 Testing
 -------
