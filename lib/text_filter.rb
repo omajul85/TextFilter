@@ -1,3 +1,3 @@
 def text_filter(str)
-	"r-d"
+	str.gsub(/[aeiou]/i,"-")
 end
