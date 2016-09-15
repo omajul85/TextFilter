@@ -1,3 +1,8 @@
 def text_filter(str)
-	str.gsub(/[aeiou]/i,"-")
+	banned_words = %w(red green blue yellow)
+	
+	str.split.map do |word|
+  	banned_words.include?(word) ? word.gsub(/[aeiou]/i,"-") : word
+  end.join(" ")
+
 end
