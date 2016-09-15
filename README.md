@@ -11,3 +11,25 @@ blue | blues |
 yellow | | 		
 
 You can use any programming language you're comfortable with, but will need to talk through your approach and demonstrate it working.
+
+Instructions
+------------
+These are the instructions for how to download and test the application:
+
+```sh
+$ git clone https://github.com/omajul85/TextFilter.git
+$ cd TextFilter/
+$ irb
+$ require './lib/text_filter'
+$ text_filter("The house is red and green")
+$ => "The house is r-d and gr--n"
+```
+Testing
+-------
+
+You can run the test using the command below:
+
+```sh
+$ cd TextFilter/
+$ rspec
+```
